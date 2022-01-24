@@ -23,3 +23,8 @@ priklad-1-2.py
 priklad-1-3.py
 - pracovanie s grafickym uzivatelskym rozhranim TkInter
 - len ako priklad, studium na doma - ako bude mat kto cas a chut
+
+Ako sa da programovat hra aj cez internet
+Hra: https://scratch.mit.edu/projects/620260830/
+Vizualne znazornenie: https://scratch.mit.edu/projects/620260830/editor/
+
