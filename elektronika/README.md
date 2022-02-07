@@ -2,8 +2,8 @@ Raspberry PI
 ============
 
 Kde sa daju kupit modely Raspberry PI
-* [](https://www.alza.sk/raspberry/v3978.htm)
-* [](https://techfun.sk/kategoria-produktu/raspberry-pi-orange-pi-banana-pi-vyvojove-dosky-a-moduly/)
+* https://www.alza.sk/raspberry/v3978.htm
+* https://techfun.sk/kategoria-produktu/raspberry-pi-orange-pi-banana-pi-vyvojove-dosky-a-moduly/
 
 Linky
 * [Casopis MagPi (anj)](https://magpi.raspberrypi.com/issues)
