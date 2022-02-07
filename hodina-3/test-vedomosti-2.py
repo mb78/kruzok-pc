@@ -2,8 +2,14 @@
 
 # vylepsenie: vyhodnotenie 3 otazok pomocou funkcie
 
+import sys
+
+SUBOR='matematika.test'
+if (len(sys.argv)>1):
+    SUBOR=sys.argv[1]
+
 # otvor ('open') subor 'matematika.test' a spristupni ho pomocou premennej 'subor'
-subor=open('matematika.test')
+subor=open(SUBOR)
 
 # "def" je klucove slovo, ktore vravi - definuje vlastny zlozeny prikaz (podprogram) s menom
 # 'spracuj_otazku', zatvorky zatial neobsahuju ziadny parameter (argument)

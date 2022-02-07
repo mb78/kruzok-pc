@@ -14,3 +14,9 @@ Domáce úlohy nie sú, skôr ak majú deti doma možnosť a chuť, môžu skús
 Užitočné odkazy:
 * [geo-inf.sk/materialy-k-pythonu](geo-inf.sk/materialy-k-pythonu)
 
+Adresare
+* elektronika - par napadov, ako ozivit hodiny s pouzitim elektroniky - niekolkych LED diod alebo matic
+* hodina-1
+* hodina-2
+* hodina-3
+* hra - mozete sa pohrat vo dvojici, original hry je na adrese https://github.com/techwithtim/PygameForBeginners.git, spustite ju pomocou 'python3 main.py'

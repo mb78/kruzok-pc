@@ -5,8 +5,12 @@
 # nacitanie modulu (dalsich funkcii python-u) "sys"
 import sys
 
+SUBOR='matematika.test'
+if (len(sys.argv)>1):
+    SUBOR=sys.argv[1]
+
 # otvor ('open') subor 'matematika.test' a spristupni ho pomocou premennej 'subor'
-subor=open(sys.argv[1])
+subor=open(SUBOR)
 
 def spracuj_otazku():
     print('------------------------------------------')
