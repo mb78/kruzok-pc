@@ -14,3 +14,5 @@ print(3)
 # - dalsia hodnota je 4, ta uz je rovna druhemu parametru (argumentu) funkcie range(1,4), ukonci cyklus
 for i in range(1,4):
     print(i)
+
+# range(1,4) funkcia umozni cyklu for zopakovat print(i) 3 krat, pre hodnotu v druhom parametri sa uz nezavola
