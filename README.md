@@ -13,10 +13,20 @@ Domáce úlohy nie sú, skôr ak majú deti doma možnosť a chuť, môžu skús
 
 Užitočné odkazy:
 * [geo-inf.sk/materialy-k-pythonu](geo-inf.sk/materialy-k-pythonu)
+* inštalácia interpretra jazyka Python
+  * Linux (Ubuntu) - apt-get install python3
+  * Windows 8 a vyššie (64 bit) - https://www.python.org/ftp/python/3.9.10/python-3.9.10-amd64.exe
+  * Windows 7 (32 bit) - https://www.python.org/ftp/python/3.8.10/python-3.8.10.exe
+  * poznámka: po spustení si zvoľte prvú možnosť - inštalovať s prostredím IDLE a tiež zaškrtnite voľbu na spodnej časti (pridať python do cesty pre spustenie)
+* nainštalovanie knižnice `pygame`
+  * Linux
+    * `sudo python3 -m pip install pygame`
+  * Windows
+    * stlačte `Win` kláves spolu s `R` a do okna, ktoré sa zobrazí, odošlite `cmd`, zobrazí sa okno terminálu
+    * v ňom instalovanie prebehne po spustené `py -m pip install pygame`
 
-Adresare
-* elektronika - par napadov, ako ozivit hodiny s pouzitim elektroniky - niekolkych LED diod alebo matic
-* hodina-1
-* hodina-2
-* hodina-3
-* hra - mozete sa pohrat vo dvojici, original hry je na adrese https://github.com/techwithtim/PygameForBeginners.git, spustite ju pomocou 'python3 main.py'
+Adresáre
+* elektronika - pár napadov, ako oživiť hodiny s použitím elektroniky - niekoľkých LED diód alebo matíc
+* hodina-1, hodina-2, ... - mini projekty na každú hodinu
+* hra - možete sa pohrať vo dvojici, originál hry je na adrese https://github.com/techwithtim/PygameForBeginners.git, spustíte ju pomocou `python3 main.py`
+  * ďalšia hra je priamo v balíku `pygame`, spustíte ju príkazom `python3 -m pygame.examples.aliens`
