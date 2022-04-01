@@ -12,7 +12,7 @@ class Tank:
         self.image_explosion=pygame.image.load('explosion.png')
         self.image_explosion=pygame.transform.rotate(pygame.transform.scale(self.image_explosion, (150,120)), 0)
         self.explosion_sound = pygame.mixer.Sound("explosion-01.wav")
-
+        self.direction_right=True
     def blit(self):
         if (self.exploded):
             self.screen.blit(self.image_explosion,(self.x,HEIGHT-120))
@@ -24,6 +24,12 @@ class Tank:
             self.x=0
         if (self.x>WIDTH):
             self.x=WIDTH
+        if (self.direction_right and velocity<0):
+            self.image=pygame.transform.flip(self.image,True,False)
+            self.direction_right=False
+        if (not self.direction_right and velocity>0):
+            self.image=pygame.transform.flip(self.image,True,False)
+            self.direction_right=True
     def explode(self):
         self.exploded=True
         self.exploded_time=time.time()
