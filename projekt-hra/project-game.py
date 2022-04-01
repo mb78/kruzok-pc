@@ -70,19 +70,26 @@ def main():
         try: handle_key_event()
         except pygame.error: break
         blit_backgound()
-        blit_text("SCORE",x=10,y=HEIGHT//2-30)
+        blit_text("SCORE",x=10,y=HEIGHT//2-40)
         blit_text("  jetplane %d" % score_hits,x=10,y=HEIGHT//2)
-        blit_text("  tank %d" % score_launched,x=10,y=HEIGHT//2+30)
+        blit_text("  tank %d" % score_launched,x=10,y=HEIGHT//2+40)
         jetplane.blit()
         tank.blit()
+        del_rockets=[]
+        i=0
         for rocket in rockets:
             rocket.move(0,VELOCITY_ROCKET)
             rocket.blit()
+            if (rocket.y>=HEIGHT):
+                del_rockets.append(i)
+            i+=1
             if ( abs(tank.x+30-rocket.x)<50 and rocket.y>HEIGHT-20):
                 blit_text("BOOM",x=rocket.x,y=HEIGHT-80)
                 tank.explode()
                 score_hits+=1
                 break
+        for i in del_rockets:
+            del rockets[i]
         if (tank.exploded):
             rockets=[]
             tank.restart()
