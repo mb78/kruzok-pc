@@ -5,7 +5,7 @@ class Jetplane:
     def __init__(self, screen):
         self.screen=screen
         self.x=0
-        self.image=pygame.image.load('mig.png')
+        self.image=pygame.image.load('jetplane.png')
         self.image=pygame.transform.rotate(pygame.transform.scale(self.image, (160,40)), 0)
         self.direction_right=False
         self.explosion_sound = pygame.mixer.Sound("bomb-falling-and-exploding-02.mp3")

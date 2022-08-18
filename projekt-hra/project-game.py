@@ -35,7 +35,11 @@ score_hits=0
 def launch_rocket():
     global last_rocket_launch_ts,score_launched
     if (time.time()-last_rocket_launch_ts>0.5):
-        rockets.append(Rocket(screen,jetplane.x+80,30))
+        if (jetplane.direction_right):
+            velocity_x=VELOCITY_JETPLANE
+        else:
+            velocity_x=-VELOCITY_JETPLANE
+        rockets.append(Rocket(screen,jetplane.x+80,30,velocity_x))
         last_rocket_launch_ts=time.time()
         score_launched+=1
 
