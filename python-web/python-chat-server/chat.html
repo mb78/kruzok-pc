@@ -9,7 +9,7 @@
           alert("Your browser does not support websockets.")
         }
  
-        ws = new WebSocket("ws://0.0.0.0:8100");
+        ws = new WebSocket("ws://192.168.43.34:8100");
         ws.onmessage = function(evt) { $("#msg").append("<p>"+evt.data+"</p>"); };
         ws.onclose = function() { debug("socket closed"); };
         ws.onopen = function() {
@@ -32,5 +32,6 @@
     <div id="debug"></div>
     <div id="msg"></div>
     <textarea id="keyboard"></textarea>
+    <img src="jpg.png" height="200" width="500"/>
   </body>
 </html>
