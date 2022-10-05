@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="cs-cz">
+    <head>
+        <meta charset="utf-8" />
+        <title>Prva aplikacia</title>
+    </head>
+
+    <body>
+        <script type="text/javascript">
+
+function kontrola_odpovede()
+{
+//document.write(document.getElementById('hodnota_a'));
+	vysledok=document.getElementById('vysledok');
+	hodnota_a=document.getElementById('hodnota_a');
+	hodnota_b=document.getElementById('hodnota_b');
+	sucet_a_b=document.getElementById('sucet_a_b');
+	vypocitany_vysledok=parseInt(hodnota_a.value) + parseInt(hodnota_b.value);
+	if (sucet_a_b.value==vypocitany_vysledok)
+	{
+		vysledok.innerHTML="Spravne !";
+	} else
+	{
+		vysledok.innerHTML="Chyba ! spravny vysledok je "+String(vypocitany_vysledok);
+	}
+}
+        </script>
+<p>
+Hodnota A <input id="hodnota_a" type=line><br/>
+Hodnota B <input id="hodnota_b" type=line></br>
+Sucet <input id="sucet_a_b" type=line></br>
+<button onclick="kontrola_odpovede()">kontrola odpovede</button>
+</p>
+
+<p id="vysledok"></p>
+
+    </body>
+</html>
