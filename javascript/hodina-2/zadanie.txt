@@ -1,0 +1,7 @@
+countdown - Timotej
+* prelozit do slovenciny
+* dni, hodiny, mesiace a hodiny - ciselnu hodnotu zobrazit inymi farbami (volitelne)
+
+piskvorky - Jonas a Kiko
+* krizik zobrazit jednou farbou a kruzok inou
+* zmenit styl oramovania - spravit hrubsie ciary
