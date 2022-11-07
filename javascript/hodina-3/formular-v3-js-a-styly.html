@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>Login Form</title>
+<style>
+  body {background-color: powderblue;text-align:center;}
+  h1   {color: blue;}
+  p    {color: red;}
+</style>
+</head>
+<body>
+    <h3>LOGIN</h3>
+        <form name="login_form" onsubmit="submit_form()">
+        <h4>EMAIL</h4>
+            <input type="text" id="email" placeholder="Enter your email id"/>
+        <h4>PASSWORD</h4>
+            <input type="password" placeholder="Enter your password"/></br></br>
+            <input type="submit" value="Login"/>
+            <input type="button" value="SignUp" onClick="create()"/>
+    </form>
+</body>
+<script type="text/javascript">
+    function submit_form()
+    {
+      var email=document.getElementById("email").value;
+      alert("Login of user "+email+" successfully");
+    }
+    function create()
+    {
+      alert("New Login Created");
+    }
+</script>
+</html>
