@@ -35,6 +35,7 @@ Links
 - https://files.waveshare.com/wiki/ESP32-C3-Zero/XL-0807RGBC-WS2812B%20(1).pdf
 - https://github.com/espressif/esp-idf (Espressif IoT Development Framework)
   - https://docs.espressif.com/projects/esp-idf/en/latest/esp32c3/api-reference/api-conventions.html
+- https://www.espboards.dev/esp32/esp32-c3-zero/
 
 Chip Espressif ESP32-C3FN4, RiscV32
 
@@ -57,7 +58,7 @@ Chip Espressif ESP32-C3FN4, RiscV32
   - 22 interrupts
   - interfaces:
     - 3 × SPI
-    - 1 × I2C
+              - 1 × I2C
     - 2 × UART
     - 1 × I2S
     - 2 × ADC
@@ -84,6 +85,14 @@ Arduino IDE
    -| 5                  6 |-
     |       [ C3  ]        |
     +----------------------+
+
+GP0-GP4: UART1/PWM/TWAI/I2S/ADC/I2C/SPI
+GP5-GP9: as above, without ADC
+GP10: integrated LED WS2812
+GP18: USB DM
+GP19: USB DP
+GP20: UART0 RX
+GP21: UART0 TX
 
 ```
 
@@ -133,15 +142,16 @@ void loop() {
 # ESP32 - wiring
 
 ```text
-Display              ESP32
-VCC ------------------- 5V
-GND ------------------ GND
-CS ------------------ IO-34 (CS)
-RST ----------------- IO-38 (RESET)
-AO ------------------ IO-37 (DC)
-SDA ----------------- IO-35 (MOSI)
-SCK ----------------- IO-36 (SCLK)
-LED ------------------ 3.3V
+Display       ESP32
+
+BKL/BL        0
+CS / SS       1  7
+DC            2
+RST           3
+SDA / MOSI    4  8/6 (MISO=5)
+SCL / SCLK    5  4
+GND           GND
+VCC           3.3V
 ```
 
 vim: et ts=2 sw=2 et
