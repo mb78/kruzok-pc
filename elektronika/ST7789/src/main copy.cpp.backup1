@@ -1,0 +1,50 @@
+#include <Adafruit_GFX.h>
+#include <Adafruit_ST7735.h>
+#include <SPI.h>
+
+// Pin definitions
+#define TFT_CS    5
+#define TFT_RST   8
+#define TFT_DC    9
+#define TFT_MOSI  6
+#define TFT_SCLK  4
+
+// Init with hardware SPI
+Adafruit_ST7735 tft = Adafruit_ST7735(TFT_CS, TFT_DC, TFT_MOSI, TFT_SCLK, TFT_RST);
+
+void setup() {
+  Serial.begin(115200);
+
+  // GREEN TAB = initR(INITR_144GREENTAB) for 128x128
+  // If your 1.54" is 240x240 use ST7789 lib instead
+  // For 128x128 ST7735 green tab:
+  tft.initR(INITR_GREENTAB);  // <-- green tab flag
+
+  tft.setRotation(1);
+  tft.fillScreen(ST77XX_BLACK);
+
+  tft.setTextColor(ST77XX_GREEN);
+  tft.setTextSize(2);
+  tft.setCursor(10, 30);
+  tft.println("ESP32-C3");
+  tft.setCursor(10, 55);
+  tft.println("Zero OK!");
+
+  // Draw some shapes
+  tft.drawRect(5, 5, 118, 118, ST77XX_WHITE);
+  tft.fillCircle(64, 100, 10, ST77XX_CYAN);
+}
+
+void loop() {
+  // Animate a bouncing dot
+  static int x = 64, y = 64;
+  static int dx = 2, dy = 2;
+
+  tft.fillCircle(x, y, 5, ST77XX_BLACK);
+  x += dx; y += dy;
+  if (x <= 10 || x >= 118) dx = -dx;
+  if (y <= 10 || y >= 118) dy = -dy;
+  tft.fillCircle(x, y, 5, ST77XX_RED);
+
+  delay(20);
+}
